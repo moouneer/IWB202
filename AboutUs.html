@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن | F24_Assignment</title>
+  <link rel="stylesheet" href="css/Style.css" />
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
+    <a href="home.html" class="brand">
+      <img src="assets/logo.svg" alt="Logo"/>
+      <span>AI Apps Co.</span>
+    </a>
+    <nav>
+      <a href="home.html" id="nav-home">الرئيسية</a>
+      <a href="AboutUs.html" id="nav-about">من نحن</a>
+      <a href="apps.html" id="nav-apps">التطبيقات</a>
+      <a href="add_app.html" id="nav-add">إضافة تطبيق</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="card">
+      <h1>من نحن</h1>
+      <p>نحن موقع للتعريف بتطبيقات الذكاء الاصطناعي  هدفنا تقديم معلومات موجزة وعملية عن أشهر الأدوات، مع إمكانية إضافة تطبيقات جديدة والتحقق من صحة المدخلات.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>معلومات عامة</h2>
+        <ul>
+          <li>اسم الشركة الافتراضية: <strong>AI Apps Co.</strong></li>
+          <li>مجال العمل: <strong>التقنية والذكاء الاصطناعي</strong></li>
+          <li>الرسالة: تمكين الزوار من اكتشاف أدوات الذكاء الاصطناعي بسهولة.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>معلومات التواصل</h2>
+        <ul>
+          <li>البريد الإلكتروني: <a href="mouner_290743@svuonline.org">mouner_290743@svuonline.org</a></li>
+          <li>الهاتف: <a href="tel:+963000000000">+963 00 000 000</a></li>
+          <li>العنوان: دمشق — سوريا </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> فوتر</div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/myFunctions.js"></script>
+  <script>
+
+    document.getElementById('nav-home').setAttribute('aria-current','page');
+  </script></body>
+</html>

@@ -1,0 +1,152 @@
+/* Style.css — تنسيق موحد لكل الصفحات */
+:root{
+  --bg:#0b1220;
+  --card:#111827;
+  --muted:#6b7280;
+  --text:#f9fafb;
+  --accent:#7c3aed;
+  --accent2:#06b6d4;
+  --ok:#10b981;
+  --warn:#f59e0b;
+  --bad:#ef4444;
+  --border:rgba(255,255,255,0.08);
+  --shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+*{ box-sizing:border-box; }
+html,body{
+  margin:0; padding:0; background:linear-gradient(180deg, #0b1220, #0b1220 50%, #0d1529 100%);
+  color:var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  line-height:1.6;
+}
+
+.container{
+  width:min(1100px, 92vw); margin-inline:auto; padding:24px;
+}
+
+header.site-header{
+  position:sticky; top:0; z-index:50; backdrop-filter: blur(8px);
+  background:rgba(12, 18, 36, 0.6); border-bottom: 1px solid var(--border);
+}
+
+.brand{
+  display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:0.2px;
+}
+.brand img{ width:36px; height:36px; }
+.brand span{ background: linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+nav{
+  display:flex; gap:12px; flex-wrap:wrap;
+}
+nav a{
+  color:var(--text); text-decoration:none; padding:8px 12px; border:1px solid transparent; border-radius:999px;
+  transition: all .2s ease;
+}
+nav a:hover{ border-color:var(--border); background:rgba(255,255,255,0.04); }
+nav a[aria-current="page"]{
+  background:linear-gradient(90deg, rgba(124,58,237,.25), rgba(6,182,212,.25));
+  border-color:rgba(255,255,255,0.12);
+}
+
+main{ padding-block: 32px 64px; }
+
+.card{
+  background:var(--card); border: 1px solid var(--border); border-radius:16px;
+  padding:5px; box-shadow:var(--shadow);
+}
+
+h1,h2,h3{ line-height:1.25; margin: 0 0 16px; }
+h1{ font-size: clamp(28px, 3vw, 40px); }
+h2{ font-size: clamp(22px, 2.2vw, 28px); margin-top:10px; }
+
+.muted{ color:var(--muted); }
+
+.footer{
+  border-top:1px solid var(--border); padding:16px 0px; color:#c6d0e3; font-size:14px; position:sticky; bottom: 0;
+}
+
+/* جداول التطبيقات */
+.table-wrap{ overflow:auto; border-radius:12px; border:1px solid var(--border); }
+table{
+  border-collapse:collapse; width:100%; min-width:760px; background: rgba(255,255,255,0.02);
+}
+thead th{
+  text-align:left; font-weight:700; letter-spacing:.2px; padding:14px 16px; background: rgba(255,255,255,0.03);
+  border-bottom:1px solid var(--border);
+}
+tbody td{
+  padding:12px 16px; border-bottom:1px solid var(--border);
+}
+.badge{
+  display:inline-block; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:600;
+  border:1px solid var(--border); background:rgba(255,255,255,0.04);
+}
+.badge.ok{ background:rgba(16,185,129,.15); border-color: rgba(16,185,129,.35); color:#d1fae5; }
+.badge.no{ background:rgba(239,68,68,.15); border-color: rgba(239,68,68,.35); color:#fee2e2; }
+
+/* أزرار عامة */
+.btn {
+    padding: 8px 15px;
+    border-radius: 25px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+    cursor: pointer;
+    transition: transform .05s 
+ease, background .2s 
+ease, border-color .2s 
+ease;
+}
+.btn:hover{ background:rgba(255,255,255,.06); border-color: rgba(255,255,255,.18); }
+.btn:active{ transform: translateY(1px); }
+.btn.primary{
+  background: linear-gradient(90deg, var(--accent), var(--accent2)); border-color: transparent;
+}
+
+/* نماذج */
+form .field{ margin-bottom:14px; }
+label{ display:block; margin-bottom:6px; font-weight:600; }
+input[type="text"], input[type="url"], textarea, select{
+  width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:#0d1529; color:var(--text);
+  outline:none; transition: border-color .2s ease, box-shadow .2s ease;
+}
+input:focus, textarea:focus, select:focus{
+  border-color: rgba(124,58,237,.6); box-shadow: 0 0 0 3px rgba(124,58,237,.25);
+}
+.help{ font-size:12px; color:var(--muted); }
+.error{ color:#fecaca; font-size:13px; margin-top:6px; }
+
+/* نافذة التفاصيل (Modal) */
+.modal-backdrop{
+  position:fixed; inset:0; background: rgba(0,0,0,.55); display:none; align-items:center; justify-content:center; padding:20px;
+}
+.modal{ width:min(860px, 92vw); background: var(--card); border:1px solid var(--border); border-radius:18px; box-shadow: var(--shadow); padding:18px; display:grid; gap:14px; }
+.modal .head{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.modal .content{ display:grid; gap:14px; }
+.modal .actions{ display:flex; justify-content:flex-end; gap:10px; }
+.modal-backdrop.show{ display:flex; }
+
+/* تنبيهات بسيطة */
+.alert{
+  padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:rgba(16,185,129,.1);
+  color:#d1fae5; margin-bottom:14px;
+}
+.alert.warn{ background:rgba(245,158,11,.1); color:#ffedd5; }
+
+/* شبكة بسيطة في الصفحة الرئيسية */
+.grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+.small{ font-size:14px; }
+
+/* تخطيط الصفحة: هيدر ثم محتوى يتمدّد ثم فوتر ملاصق بالأسفل */
+html, body { height: 100%; }
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* اجعل المحتوى يتمدّد ليضغط الفوتر لأسفل */
+main{ flex: 1 0 auto; }
+
+/* الفوتر يلتصق بأسفل الصفحة تلقائياً */
+.footer{ margin-top: auto; }

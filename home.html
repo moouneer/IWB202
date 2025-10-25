@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الرئيسية | F24_Assignment</title>
+  <link rel="stylesheet" href="css/Style.css" />
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
+    <a href="home.html" class="brand">
+      <img src="assets/logo.svg" alt="Logo"/>
+      <span>AI Apps Co.</span>
+    </a>
+    <nav>
+      <a href="home.html" id="nav-home">الرئيسية</a>
+      <a href="AboutUs.html" id="nav-about">من نحن</a>
+      <a href="apps.html" id="nav-apps">التطبيقات</a>
+      <a href="add_app.html" id="nav-add">إضافة تطبيق</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <section class="card">
+      <h1>تصميم وتطوير تطبيقات الويب — مشروع التعريف بتطبيقات الذكاء الاصطناعي</h1>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>أعضاء الفريق</h2>
+        <ul>
+          <li>منير مطيط (mouner matit) </li>
+             <li>الرقم الجامعي: <strong>mouner_290743</strong></li>
+
+      </div>
+
+      <div class="card">
+        <h2 style="margin-bottom: 10 PX;">رابط النشر على الإنترنت</h2>
+        <p><a class="btn primary" href="#" target="_blank" rel="noopener">رابط الموقع المنشور</a></p>
+      </div>
+
+      <div class="card">
+        <h2>ملاحظات إضافية</h2>
+        <ul class="small">
+          <li>لقد قمت باعداد الواجب بنفسي </li>
+          <li>السبب: هو انني تاخرت بالبحث عن مجموعات</li>
+          <li style="color: black;">ولم اجد الا مجموعات قد قامت بشراء الواجب</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+<footer class="footer" >
+  <div class="container">
+    <div>© <span id="year"></span> فوتر</div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/myFunctions.js"></script>
+  <script>
+
+    document.getElementById('nav-home').setAttribute('aria-current','page');
+  </script>
+</body>
+</html>

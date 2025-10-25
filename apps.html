@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التطبيقات | F24_Assignment</title>
+  <link rel="stylesheet" href="css/Style.css" />
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
+    <a href="home.html" class="brand">
+      <img src="assets/logo.svg" alt="Logo"/>
+      <span>AI Apps Co.</span>
+    </a>
+    <nav>
+      <a href="home.html" id="nav-home">الرئيسية</a>
+      <a href="AboutUs.html" id="nav-about">من نحن</a>
+      <a href="apps.html" id="nav-apps">التطبيقات</a>
+      <a href="add_app.html" id="nav-add">إضافة تطبيق</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <div id="apps-alert"></div>
+    <section class="card">
+      <h1>قائمة تطبيقات الذكاء الاصطناعي</h1>
+      <div class="table-wrap">
+        <table aria-describedby="apps-desc">
+          
+          <thead>
+            <tr>
+              <th>اسم التطبيق</th>
+              <th>الشركة المطورة</th>
+              <th>مجال الاستخدام</th>
+              <th>مجاني</th>
+              <th>إظهار التفاصيل</th>
+            </tr>
+          </thead>
+          <tbody id="apps-tbody">
+            <!-- سيتم ملء الصفوف عبر JavaScript -->
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;">
+        <a class="btn" href="add_app.html">➕ إضافة تطبيق جديد</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- نافذة التفاصيل -->
+  <div class="modal-backdrop" id="details-backdrop" role="dialog" aria-modal="true" aria-labelledby="details-title">
+    <div class="modal" role="document">
+      <div class="head">
+        <h2 id="details-title">تفاصيل التطبيق</h2>
+        <button class="btn" id="close-details" aria-label="إغلاق">✕</button>
+      </div>
+      <div class="content" id="details-content">
+        <!-- محتوى التفاصيل يتم توليده ديناميكياً -->
+      </div>
+      <div class="actions">
+        <button class="btn" id="close-details-2">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+  
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> فوتر</div>
+  </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/myFunctions.js"></script>
+  <script>
+
+    document.getElementById('nav-home').setAttribute('aria-current','page');
+  </script>  </body>
+</html>
